@@ -111,5 +111,12 @@ public class ProductController {
         return productDao.calculerMargeProduit();
     }
 
+    // GET
+    // Tri les produit par ordre alphabétique de leur nom
+    @GetMapping(value = "/trierProduitsParOrdreAlphabetique")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        System.out.println("test");
+        return productDao.findAllByOrderByNomAsc();
+    }
 
 }
