@@ -103,6 +103,13 @@ public class ProductController {
         return productDao.chercherUnProduitCher(400);
     }
 
+    // GET
+    // calcule la marge entre le prix d'achat et le prix de vente d'un produit
+    @GetMapping(value = "/AdminProduits")
+    public List<Product> calculerMargeProduit() {
+        System.out.println("test");
+        return productDao.calculerMargeProduit();
+    }
 
 
 }
